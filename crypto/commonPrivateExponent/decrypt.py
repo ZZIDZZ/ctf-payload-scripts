@@ -2,6 +2,7 @@ from Crypto.Util.number import *
 import fpylll
 
 # https://github.com/fplll/fpylll
+# http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.450.8522&rep=rep1&type=pdf
 e1 = 587438623 
 n1 = 2915050561
 e2 = 2382816879
